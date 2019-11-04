@@ -4,6 +4,13 @@ set -e
 
 echo
 echo "========================================"
+echo "Removing older packages"
+echo "----------------------------------------"
+sudo apt-get remove -y cmake
+echo "----------------------------------------"
+
+echo
+echo "========================================"
 echo "Host adding PPAs"
 echo "----------------------------------------"
 wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
