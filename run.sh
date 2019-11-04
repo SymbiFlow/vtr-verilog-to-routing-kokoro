@@ -16,7 +16,7 @@ ls -l
 cd vtr-verilog-to-routing-continuous
 source $SCRIPT_DIR/steps/git.sh
 
-# Travis compatibility script
-source $SCRIPT_DIR/travis.sh
-./.github/travis/build.sh
-./run_reg_test.pl $VTR_TEST -show_failures -j$NUM_CORES
+# Build VtR
+source $SCRIPT_DIR/steps/vtr-build.sh
+# Run the reg test.
+source $SCRIPT_DIR/steps/vtr-test.sh
