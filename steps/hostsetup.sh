@@ -42,7 +42,10 @@ sudo apt-get install -y \
         graphviz \
         inkscape \
         jq \
+        libgtk-3-dev \
+        libx11-dev \
         make \
+        ninja-build \
         nodejs \
         psmisc \
         python \
@@ -50,8 +53,8 @@ sudo apt-get install -y \
         python3-dev \
         python3-virtualenv \
         python3-yaml \
+        qt5-default \
         virtualenv \
-        ninja-build \
 
 if [ -z "${BUILD_TOOL}" ]; then
     export BUILD_TOOL=make
