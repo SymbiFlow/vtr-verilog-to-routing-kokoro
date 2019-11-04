@@ -13,8 +13,14 @@ source $SCRIPT_DIR/steps/hostinfo.sh
 ls -l
 cd github
 ls -l
-cd vtr-verilog-to-routing-continuous
+cd *_vtr-verilog-to-routing
 source $SCRIPT_DIR/steps/git.sh
+
+if [ $VTR_TEST != "vtr_strong" ]; then
+	source $SCRIPT_DIR/steps/vtr-min-setup.sh
+else
+	source $SCRIPT_DIR/steps/vtr-full-setup.sh
+fi
 
 # Build VtR
 source $SCRIPT_DIR/steps/vtr-build.sh
