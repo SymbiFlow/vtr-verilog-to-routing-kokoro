@@ -4,6 +4,13 @@ set -e
 
 echo
 echo "========================================"
+echo "Host adding PPAs"
+echo "----------------------------------------"
+sudo add-apt-repository ppa:george-edison55/cmake-3.x --yes
+echo "----------------------------------------"
+
+echo
+echo "========================================"
 echo "Host updating packages"
 echo "----------------------------------------"
 sudo apt-get update
