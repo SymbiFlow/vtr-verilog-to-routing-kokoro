@@ -6,7 +6,8 @@ echo
 echo "========================================"
 echo "Host adding PPAs"
 echo "----------------------------------------"
-sudo add-apt-repository ppa:george-edison55/cmake-3.x --yes
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add -
+sudo apt-add-repository 'deb https://apt.kitware.com/ubuntu/ xenial main'
 echo "----------------------------------------"
 
 echo
