@@ -16,7 +16,7 @@ ls -l
 cd *_vtr-verilog-to-routing
 source $SCRIPT_DIR/steps/git.sh
 
-if [ $VTR_TEST != "vtr_strong" ]; then
+if [ $VTR_TEST == "vtr_strong" ]; then
 	source $SCRIPT_DIR/steps/vtr-min-setup.sh
 else
 	source $SCRIPT_DIR/steps/vtr-full-setup.sh
