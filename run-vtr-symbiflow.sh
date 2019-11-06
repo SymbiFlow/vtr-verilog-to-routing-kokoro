@@ -15,18 +15,18 @@ cd github
 ls -l
 
 (
-	cd $KOKORO_DIR
+	cd $VTR_DIR
 	source $SCRIPT_DIR/steps/git.sh
 	# Build VtR
 	source $SCRIPT_DIR/steps/vtr-build.sh
 )
 
-export VTR=$(realpath $PWD/$KOKORO_DIR/bin/vtr)
+export VTR=$(realpath $PWD/$VTR_DIR/bin/vtr)
 $VTR --version
 
 # Run the reg test.
 (
-	cd *_symbiflow-arch-defs
+	cd $ARCH_DEFS_DIR
 	source $SCRIPT_DIR/steps/git.sh
 	# Build SymbiFlow Arch Defs environment
 	source $SCRIPT_DIR/steps/arch-defs-build.sh
