@@ -19,10 +19,11 @@ ls -l
 	source $SCRIPT_DIR/steps/git.sh
 	# Build VtR
 	source $SCRIPT_DIR/steps/vtr-build.sh
+	ls -l
 )
 
-export VTR=$(realpath $PWD/$VTR_DIR/bin/vtr)
-$VTR --version
+export VPR=$(realpath $PWD/$VTR_DIR/vpr/vpr)
+$VPR --version
 
 # Run the reg test.
 (
