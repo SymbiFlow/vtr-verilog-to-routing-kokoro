@@ -23,6 +23,7 @@ ls -l
 )
 
 export VPR=$(realpath $PWD/$VTR_DIR/vpr/vpr)
+export GENFASM=$(realpath $PWD/$VTR_DIR/build/utils/fasm/genfasm)
 $VPR --version
 
 # Run the reg test.
@@ -32,5 +33,6 @@ $VPR --version
 	# Build SymbiFlow Arch Defs environment
 	source $SCRIPT_DIR/steps/arch-defs-build.sh
 	# Run the SymbiFlow Arch Defs test
+	cd build
 	source $SCRIPT_DIR/steps/arch-defs-test.sh
 )
