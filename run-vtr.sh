@@ -13,7 +13,7 @@ source $SCRIPT_DIR/steps/hostinfo.sh
 ls -l
 cd github
 ls -l
-cd *_vtr-verilog-to-routing
+cd $VTR_DIR
 source $SCRIPT_DIR/steps/git.sh
 
 if [ $VTR_TEST == "vtr_reg_strong" ]; then
