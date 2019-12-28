@@ -26,6 +26,17 @@ echo "----------------------------------------"
 
 echo
 echo "========================================"
+echo "Host remove packages"
+echo "----------------------------------------"
+sudo apt-get remove -y \
+	python-pytest \
+
+
+sudo apt-get autoremove -y
+
+echo "----------------------------------------"
+echo
+echo "========================================"
 echo "Host install packages"
 echo "----------------------------------------"
 sudo apt-get install -y \
@@ -33,6 +44,7 @@ sudo apt-get install -y \
         bison \
         build-essential \
         ca-certificates \
+        clang-format \
         cmake \
         colordiff \
         coreutils \
