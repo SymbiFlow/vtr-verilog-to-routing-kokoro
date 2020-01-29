@@ -3,7 +3,7 @@
 export ARCH_DEFS_TEST=${ARCH_DEFS_TEST:-all_demos}
 export V2X_TEST=${V2X_TEST:-all_v2x_tests}
 export VPR_NUM_WORKERS=${CORES}
-export NUM_JOBS=${NUM_CORES:-${MAX_CORES}}
+export NUM_JOBS=${MAX_CORES}
 
 echo "========================================"
 echo "Testing symbiflow-arch-defs"
