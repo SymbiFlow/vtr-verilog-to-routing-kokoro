@@ -22,6 +22,7 @@ ls -l
 	ls -l
 )
 
+export VTR_ROOT=$(realpath $PWD/$VTR_DIR)
 export VPR=$(realpath $PWD/$VTR_DIR/vpr/vpr)
 export GENFASM=$(realpath $PWD/$VTR_DIR/build/utils/fasm/genfasm)
 $VPR --version
