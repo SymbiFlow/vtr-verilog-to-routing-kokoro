@@ -33,6 +33,8 @@ $VPR --version
 	source $SCRIPT_DIR/steps/git.sh
 	# Build SymbiFlow Arch Defs environment
 	source $SCRIPT_DIR/steps/arch-defs-build.sh
+	# Enter the conda environment
+	source env/conda/bin/activate symbiflow_arch_def_base
 	# Run the SymbiFlow Arch Defs test
 	cd build
 	source $SCRIPT_DIR/steps/arch-defs-test.sh
