@@ -11,14 +11,8 @@ echo ""
 echo "ARCH_DEFS_TEST=${ARCH_DEFS_TEST}"
 echo "VPR_NUM_WORKERS=${VPR_NUM_WORKERS}"
 echo "NUM_JOBS=${NUM_JOBS}"
-
-echo ""
-echo "========================================"
-echo "Preparing to build conda environment"
-echo "----------------------------------------"
 date
 echo ""
-ninja all_conda
 
 echo ""
 echo "========================================"
