@@ -19,4 +19,4 @@ echo $PWD
 pwd
 pwd -L
 pwd -P
-./run_reg_test.pl $VTR_TEST -show_failures -j$MAX_CORES
+./run_reg_test.py $VTR_TEST -show_failures -j$MAX_CORES
