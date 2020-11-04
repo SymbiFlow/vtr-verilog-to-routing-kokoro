@@ -69,6 +69,18 @@ sudo apt-get install -y \
         libtbb-dev \
         virtualenv \
 
+echo "----------------------------------------"
+echo
+echo "========================================"
+echo "Host install python packages"
+echo "----------------------------------------"
+pyenv install -f 3.6.3
+pyenv global 3.6.3
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+rm get-pip.py
+python3 -m pip install -r requirements.txt
+
 if [ -z "${BUILD_TOOL}" ]; then
     export BUILD_TOOL=make
 fi
